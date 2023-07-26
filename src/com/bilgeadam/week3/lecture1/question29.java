@@ -28,7 +28,10 @@ public class question29 {
 		 * sayfa oluğunu ekrana yazdıralım
 		 * *
 		 */
+		boolean kontrol = true;
+		int seçim;
 		Scanner sc=new Scanner(System.in);
+		while(kontrol) {
 		System.out.println("MENÜ");
 		System.out.println();
 		System.out.println("1- Kelimenin içindeki harf sayısı");
@@ -37,10 +40,10 @@ public class question29 {
 		System.out.println("4- Girilen 5 adet kelimenin a, b, c ile başlaması kontrolü");
 		System.out.println("0- Ç I K I Ş");
 		System.out.print("Seçiniz: ");
-		int seçim = sc.nextInt();
+		seçim = sc.nextInt();
 		//Soru 1
 		switch (seçim) {
-		case 1:
+		case 1:{
 		System.out.println("Lütfen bir kelime girin: ");
 		String kelime=sc.nextLine();
 		sc.nextLine();
@@ -56,6 +59,7 @@ public class question29 {
 			}else {System.out.println("Aradığınız harf yok.");
 			}break;
 			}
+		}
 			
 		
 	    case 2:
@@ -74,12 +78,64 @@ public class question29 {
 	    break;
 	    
 		
-	    /*case 3:
+	    case 3: {
+	    	System.out.println("Lütfen bir kelime girin: ");
+	    	String kelime=sc.nextLine();
+	    	String ters="";
+	    	for(int i=kelime.length()-1;i>=0;i--) {
+	    		ters+=kelime.toLowerCase().equals(ters);
+	    		System.out.println();
+	    	}
+	    	if(kelime.toLowerCase().equals(ters)) {
+	    		System.out.println("Kelimeniz palindromdur.");
+	    }else {
+	    	System.out.println("Kelimeniz palindorm değildir.");
+	    }
+	    }
+	    	//yada
+	    	  /*int right=kelime.length()-1;
+	    	  int left=0;
+	    	  
+	    	  boolean isPalindrome=true;
+	    	  while(left<right) {
+	    		  if(kelime.charAt(left)!=kelime.charAt(right)) {
+	    			  isPalindrome=false;
+	    		  }
+	    		  left++;
+	    		  right--;
+	    	  }
+	    	  if(isPalindrome) {
+	    		  System.out.println("Palindromdur.");
+	    	  }else {
+	    		  System.out.println("Palindrom değildir.");
+	    	  }
+	    	 */
+	    	
 	    	
 	    
-	    case 4:*/
+	    case 4:{
+	    	int a=0,b=0,c=0,d=0,toplam=0;
+	    	System.out.println("\nSayfa açma");
+	    	System.out.println("Lütfen 5 adet kelime giriniz: ");
+	    	for(int i=0;i<5;i++) {
+	    		System.out.println((i+1)+". kelimeyi giriniz: ");
+	    		String kelime=sc.nextLine();
+	    		if(kelime.charAt(0)=='a') {
+	    			a=1;
+	    		}else if(kelime.charAt(0)=='b') {
+	    			b=1;
+	    		}else if(kelime.charAt(0)=='c') {
+	    			c=1;
+	    		}else {
+	    			d+=1;
+	    		}
+	    		toplam=a+b+c+d;
+	    		System.out.println("Toplam dosya sayısı:"+toplam);
+	    	}
+	    }
 		}
 
 	}
 
+}
 }
