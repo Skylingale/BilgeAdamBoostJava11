@@ -1,5 +1,7 @@
 package com.bilgeadam.week3.lecture3;
 
+import java.util.Arrays;
+
 public class Question40 {
 
 	public static void main(String[] args) {
@@ -30,7 +32,7 @@ public class Question40 {
 				System.out.println(array[j]+",");
 			}
 		}
-
+		System.out.println(Arrays.toString(array));
 	}
 
 }

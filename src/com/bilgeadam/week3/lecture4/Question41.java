@@ -15,15 +15,17 @@ public class Question41 {
 		for(int i=0;i<array.length;i++) {
 			for(int j=0;j<array[i].length;j++) {
 				array[i][j]=(i+1)+" x "+(j+1)+" = "+((i+1)*(j+1));
-			}
-		}
-		
-		for (int i=0;i<array.length;i++) {
-			for (int j=0;j<array.length;j++) {
 				System.out.println(array[i][j]);
 			}
 			System.out.println();
 		}
+		
+//		for (int i=0;i<array.length;i++) {
+//			for (int j=0;j<array.length;j++) {
+//				System.out.println(array[i][j]);
+//			}
+//			System.out.println();
+//		}
 
 	}
 
